@@ -3,18 +3,18 @@ import React from 'react';
 import "../css/Input.css"
 
 const Input = (props) => {
-  const {string, setString, palindroneTest} = props
+  const {int, setInt, reverser} = props
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    palindroneTest(string)
+    reverser(int)
   } 
 
   return (
     <div className="input">
       <form className="input-form" onSubmit={handleSubmit} >
-        <label className="input-label">Enter Your integer!</label>
-        <input className="input-input" type="text" value={string} onChange={(e) => setString(e.target.value)}  />
+        <label className="input-label">Enter your integer!</label>
+        <input className="input-input" type="text" value={int} onChange={(e) => setInt(e.target.value)}  />
         <button className="input-button">Reverse</button>
       </form>
     </div>

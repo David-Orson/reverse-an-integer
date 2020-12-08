@@ -9,17 +9,13 @@ import Code from './components/Code';
 import Explanation from './components/Explanation';
 
 const App = () => {
-  const [string, setString] = useState('')
-  const [palindrone, setPalindrone] = useState(null);
+  const [int, setInt] = useState('')
+  const [reversedInt, setReversedInt] = useState(null);
 
-  const palindroneTest = (string) => {
-    if (string) {
-      let reversed = (string.split('').reverse().join(''))
+  const reverser = (int) => {
+    const reversed = int.toString().split('').reverse().join('');
 
-      setPalindrone(((reversed === string).toString()));
-    } else {
-      setPalindrone('error')
-    }    
+    setReversedInt(parseInt(reversed) * Math.sign(int));
   }
 
   return (
@@ -27,8 +23,8 @@ const App = () => {
       <div className="app">
         <Header />
         <div className="app-main">
-          <Input string={string} setString={setString} palindroneTest={palindroneTest} />
-          <Output palindrone={palindrone} />
+          <Input int={int} setInt={setInt} reverser={reverser} />
+          <Output reversedInt={reversedInt} />
           <p className="sign">App by David Orson</p>
         </div>
         <div className="app-secondary">
