@@ -13,9 +13,9 @@ const Input = (props) => {
   return (
     <div className="input">
       <form className="input-form" onSubmit={handleSubmit} >
-        <label className="input-label">Enter Your String!</label>
+        <label className="input-label">Enter Your integer!</label>
         <input className="input-input" type="text" value={string} onChange={(e) => setString(e.target.value)}  />
-        <button className="input-button">TEST</button>
+        <button className="input-button">Reverse</button>
       </form>
     </div>
   )
