@@ -1,0 +1,24 @@
+.output {
+  height: 181px;
+  padding: 20px;
+  text-align: center;
+}
+
+.output-tagline {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.output-string {
+  font-size: 18px;
+}
+
+.result {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.result-tagline {
+  margin-bottom: 20px;
+}
