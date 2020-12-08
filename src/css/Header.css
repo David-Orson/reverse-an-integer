@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.705), rgba(255, 0, 0, 0.507));
+  background: linear-gradient(to bottom right, rgba(0, 255, 0, 0.705), rgba(0, 255, 0, 0.507));
   padding: 20px;
   border-radius: 0px 0px 10px 10px;
   height: 100px;
