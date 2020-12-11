@@ -22,10 +22,11 @@ const Explanation = () => {
         <img src={arrowDown} className={`arrow-down ${open ? 'arrow-open' : null}`} onClick={toggleOpen} />
       </div>
       <div className="explanation-dropdown">
-        <p className="explanation-text">This coding challenge is to check if an entered string is a palindrone or not by outputting true or false apon testing the string.<br/><br />
-        There are 3 cases that need to be handled for the application to run smoothly: the true case if the string is a palindrone, the false case if the string is not a palindrone and an error case if the user starts a test without a string entered into the input. <br/><br />
-        The methodology for this challenge is to first check if there is a string, if not then the output will be error and a case will be handled with UI output. If there is a string entered then the string will be reversed (In the same way as the previous challenge) and will be equality checked against its original un-reversed self.<br/>
-        If the equality check shows true, then the output will be true and if not then false. The true or false outputs are then ran through the .toString() helper function so that they can be used as text output and css classes in the UI outut.  
+        <p className="explanation-text">This coding challenge is to reverse any integer that the user inputs whilst maintaining whether it is a positive or negative number and if the number ends with zeros, they are removed upon reversal.<br/><br />
+        As in the previous coding challenges, we have reversed strings, so we can use the same logic but only once we convert the number into a string. To do this we call the '.toString()' function, we then can use '.split('')', '.reverse()' and '.join()' functions to reverse the number. We can assign this new value as a variable as 'const reversed'.<br/><br />
+        At this stage we have a variable called reversed which is a string that contains the characters of the original integer reversed. Another function we need to use now is the 'parseInt()' function to convert the string back to a number, so we pass the 'reversed' variable as an argument to this function.<br/><br/>
+        Lastly, in order to maintain whether the number is a positive or negative value, we need to replace the negative sign if the integer was originally negative. To do this, we can use another JS function called 'Math.sign()' which returns a 1 when passed a positive number as an argument and a -1 when a negative number is passed as an argument. So we can pass the original integer into this and multiple the return value by our integer parsed from the reverse variable.<br/><br/>
+        This concludes the code required, as we run 'parseInt()' on numbers which could end with multiple zeros, such as 500, the number is not returned as '005' but simply '5' which handles this case. Also if '005' was the value that was returned, multiplying this by the '1' or '-1' from 'Math.sign()' would return '5' or '-5' respectively.
         </p>
         {/* <div className="code-container">
           <p>
